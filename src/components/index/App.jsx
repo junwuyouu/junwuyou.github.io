@@ -20,8 +20,7 @@ const appBg = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundAttachment: 'fixed',
-  backgroundRepeat: 'no-repeat'
-
+  backgroundRepeat: 'no-repeat',
 }
 
 class App extends Component {
@@ -29,21 +28,21 @@ class App extends Component {
     super(props);
     this.state = {
       mode: 'inline',
-      theme: 'light',
+      theme: 'dark',
     };
   }
 
   render() {
-    const {mode} = this.state
+    const {mode,theme} = this.state
     return (
       <div className="App">
         <div className={'blog-header'}>
-          不想当老师的程序员不是好程序员！
+          君无忧的博客
         </div>
         <div className={'blog-con'}>
           <div className={'blog-left'}>
             {/*路由切换的地方*/}
-            <Menu mode={mode}>
+            <Menu mode={mode} theme={theme}>
               {
                 RouterDate.menuList.map((item) => {
                   if (item.subMenu.length) {
@@ -76,6 +75,7 @@ class App extends Component {
             </Menu>
           </div>
           <div className={'blog-right'} style={appBg}>
+          <div className="bgcolor">
             <Router>
               {/*路由显示的地方*/}
               {
@@ -86,6 +86,7 @@ class App extends Component {
               {/*重定向*/}
               <Redirect to='/'/>
             </Router>
+            </div>
           </div>
         </div>
       </div>

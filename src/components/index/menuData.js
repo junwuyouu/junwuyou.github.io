@@ -2,39 +2,42 @@
 // 路由组件在这里引入
 import Vue from '../../pages/vue/index'
 import ReactD from '../../pages/react/index'
+import myCss from '../../pages/css/index'
+import myJs from '../../pages/js/index'
+import myHtml from '../../pages/html/index'
 
 const menuList = [
   {
     title: '框架',
-    url: '',
+    url: '/frame',
 
     subMenu: [
       {
         title: 'Vue',
-        url: '/vue',
+        url: '/frame/vue',
 
       },
       {
         title: 'React',
-        url: '/react',
+        url: '/frame/react',
 
       }
     ]
   },
   {
     title: 'Html',
-    url: '',
+    url: '/html',
 
     subMenu: []
   },
   {
-    title: 'Css',
-    url: '',
+    title: 'CSS',
+    url: '/css',
     subMenu: []
   },
   {
     title: 'JavaScript',
-    url: '',
+    url: '/js',
     subMenu: []
   }
 ];
@@ -46,7 +49,19 @@ const routeList = [
   },
   {
     path: '/react',
-    component: ReactD
+    component: ReactD,
+  },
+  {
+    path: '/css',
+    component: myCss,
+  },
+  {
+    path: '/html',
+    component: myHtml,
+  },
+  {
+    path: '/js',
+    component: myJs,
   }
 ]
 

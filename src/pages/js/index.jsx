@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Vue extends Component {
+class myJs extends Component {
   constructor(props) {
     super(props);
   }
@@ -8,10 +8,10 @@ class Vue extends Component {
   render() {
     return (
       <div>
-       
+        myJs
       </div>
-    )
+    );
   }
 }
 
-export default Vue
+export default myJs
